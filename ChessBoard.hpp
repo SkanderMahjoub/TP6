@@ -1,5 +1,5 @@
 #pragma once
-#pragma warning(push, 0) // Sinon Qt fait des avertissements à /W4.
+#pragma warning(push, 0) // Sinon Qt fait des avertissements Ã  /W4.
 #include <QObject>
 #include <QVector>
 #include <functional>
@@ -20,7 +20,8 @@ public:
 	void setData(int column, int rank, char value);
 	void movePiece(int fromColumn, int fromRank, int toColumn, int toRank);
 	void setFen(const QString& fen);
-
+	void verifierNbrRois();
+	
 public slots:
 
 signals:
