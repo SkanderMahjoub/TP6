@@ -61,9 +61,9 @@ void ChessBoard::verifierNbrRois() {
     int m_compteurRoiNoir = 0;
     int m_compteurRoiBlanc = 0;
     for (const auto& elem : m_boardData) {
-        if (&elem == "r")
+        if (&elem == "k")
             m_compteurRoiBlanc++;
-        else if (&elem == "R")
+        else if (&elem == "K")
             m_compteurRoiNoir++;
                 
     }
