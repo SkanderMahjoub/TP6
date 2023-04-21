@@ -57,6 +57,20 @@ bool ChessBoard::setDataInternal(int column, int rank, char value)
     return true;
 }
 
+void ChessBoard::verifierNbrRois() {
+    int m_compteurRoiNoir = 0;
+    int m_compteurRoiBlanc = 0;
+    for (const auto& elem : m_boardData) {
+        if (&elem == "r")
+            m_compteurRoiBlanc++;
+        else if (&elem == "R")
+            m_compteurRoiNoir++;
+                
+    }
+    /*if (m_compteurRoiBlanc > 1 || m_compteurRoiNoir > 1)
+        throw KingException("Il y a plus que deux rois.");*/
+}
+
 void ChessBoard::movePiece(int fromColumn, int fromRank,
     int toColumn, int toRank)
 {
